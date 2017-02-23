@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TopView" customModule="XJPageView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mms" translatesAutoresizingMaskIntoConstraints="NO" id="Nbj-iR-92U">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="500" id="VrU-mi-4oi"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="irM-h4-lFr">
+                    <rect key="frame" x="20" y="520" width="335" height="127"/>
+                    <mutableString key="text">iOS多线程--并行开发二 重点分析iOS多线程开发：iOS多线程:在iOS中每个进程启动后都会建立一个主线程（UI线程），这个线程是其他线程的父线程。由于在iOS中除了主线程，其他子线程是独立于……Cocoa Touch的，所以只有主线程可以更新UI界面（新版iOS中，使用其他线程更新UI可能也能成功，但是不推荐）。iOS中多线程使用并不复杂，关键是如何控制好各个线程的执行顺序、处理好资源竞争问题……。常用的多线程开发有三种方式： 1.NSThread 2.NSOperation 3.GCD 三种方式是随着iOS的发展逐渐引入的，所以相比而言后者比前者更加简单易用，并且GCD也是目前苹果官方比较……</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="irM-h4-lFr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="1Wd-1R-DhW"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="irM-h4-lFr" secondAttribute="bottom" constant="20" id="8Bh-US-zaN"/>
+                <constraint firstItem="Nbj-iR-92U" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FR2-aw-Hbg"/>
+                <constraint firstAttribute="trailing" secondItem="Nbj-iR-92U" secondAttribute="trailing" id="ZzO-pL-MZA"/>
+                <constraint firstAttribute="trailing" secondItem="irM-h4-lFr" secondAttribute="trailing" constant="20" id="cRC-Lo-hCw"/>
+                <constraint firstItem="Nbj-iR-92U" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hUL-Ba-7CP"/>
+                <constraint firstItem="irM-h4-lFr" firstAttribute="top" secondItem="Nbj-iR-92U" secondAttribute="bottom" constant="20" id="uuR-Wn-xv7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="30.5" y="29.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mms" width="540" height="960"/>
+    </resources>
+</document>
