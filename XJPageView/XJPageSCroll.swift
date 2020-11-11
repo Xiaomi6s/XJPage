@@ -133,7 +133,7 @@ class XJPageSCroll: UIScrollView {
         }
         
         let imgView = UIImageView(image: #imageLiteral(resourceName: "slide"))
-        imgView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
+    imgView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         midView.addSubview(imgView)
         imgView.snp.makeConstraints { (make) in
             make.centerY.equalTo(label)
@@ -189,7 +189,7 @@ extension XJPageSCroll: XJOptionViewDelegate {
     }
     func optionView(_ optionView: XJOptionView, itemSizeOfIndex index: Int) -> CGSize {
         let title = titles[index]
-        let size = NSString(string: title).boundingRect(with: CGSize.zero, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: setSystemFontSize(14)], context: nil)
+        let size = NSString(string: title).boundingRect(with: CGSize.zero, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: setSystemFontSize(14)], context: nil)
         return CGSize(width: size.width, height: 40)
     }
     func optionView(_ optionView: XJOptionView, cellPointConfig cellConfig: XJOptionViewCellPoint) {

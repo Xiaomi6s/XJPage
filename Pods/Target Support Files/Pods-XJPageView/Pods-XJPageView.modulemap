@@ -1,0 +1,6 @@
+framework module Pods_XJPageView {
+  umbrella header "Pods-XJPageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

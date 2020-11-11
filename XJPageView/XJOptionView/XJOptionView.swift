@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 public typealias XJOptionViewCellPoint = AutoreleasingUnsafeMutablePointer<XJOptionViewCell>
 @objc public protocol XJOptionViewDelegate: NSObjectProtocol {
